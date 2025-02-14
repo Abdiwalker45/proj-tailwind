@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<style>
+    body {
+        background-image: radial-gradient(circle at 99% 33%, rgba(0, 180, 255, 0.1) 0%,
+                rgba(0, 180, 255, 0.1) 37%, transparent 37%, transparent 100%),
+            radial-gradient(circle at 46% 16%, rgba(0, 180, 255, 0.1) 0%,
+                rgba(0, 180, 255, 0.1) 43%, transparent 43%, transparent 100%),
+            radial-gradient(circle at 99% 25%, rgba(0, 180, 255, 0.1) 0%,
+                rgba(0, 180, 255, 0.1) 22%, transparent 22%, transparent 100%),
+            radial-gradient(circle at 57% 88%, rgba(0, 180, 255, 0.1) 0%,
+                rgba(0, 180, 255, 0.1) 86%, transparent 86%, transparent 100%),
+            radial-gradient(circle at 82% 78%, rgba(0, 180, 255, 0.1) 0%,
+                rgba(0, 180, 255, 0.1) 22%, transparent 22%, transparent 100%),
+            linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+        background-size: 100%;
+        background-position: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<body class="bg-black">
+    <!--Navbar Section -->
+
+    <nav class="bg-sky-900 text-cyan-300 drop-shadow-md p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="https://img.icons8.com/ios/452/00F6F6/cloud.png" class="w-10 text-white h-10" alt="logo">
+            <h1 class="text-2xl space-x-2 font-bold ml-2">Cloud Services</h1>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-cyan-300 focus:outline-none hover:bg-sky-950">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex items-center space-x-2">
+            <a href="./index.html" class="mr-4 hover:text-blue-500">Home</a>
+            <a href="./about.html" class="mr-4 hover:text-blue-500">About</a>
+            <a href="./Services.html" class="mr-4 hover:text-blue-500">Services</a>
+            <a href="./Contact Us.html" class="mr-4 hover:text-blue-500">Contact</a>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden fixed top-0 right-0 w-full bg-sky-900 h-screen text-4xl flex flex-col items-center text-cyan-300 space-y-10 mt-4">
+        <div class="flex justify-end w-full px-8">
+            <button id="close-btn" class="text-cyan-300 focus:outline-none hover:bg-sky-950">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <a href="./index.html" class="hover:text-blue-500">Home</a>
+        <a href="./about.html" class="hover:text-blue-500">About</a>
+        <a href="./Services.html" class="hover:text-blue-500">Services</a>
+        <a href="./Contact Us.html" class="hover:text-blue-500">Contact</a>
+    </div>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('close-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+
+    <!-- Contact Section -->
+    <div class="all mx-8 my-8 p-8 rounded-lg">
+        <h1 class="text-cyan-200 text-3xl text-center">Contact Us</h1>
+        <p class="text-cyan-200 text-3xl text-center">You can reach us at:</p>
+        <p class="text-cyan-200 text-3xl text-center">123-456-7890</p>
+        <p class="text-cyan-200 text-3xl text-center">
+            <a href="mailto:info@cloudservices.com"
+                class="text-cyan-200 text-3xl text-center">info@cloudservices.com</a>
+        </p>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    cvvx
+</body>
+
+</html>

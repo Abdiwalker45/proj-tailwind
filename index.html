@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            background-image: radial-gradient(circle at 99% 33%, rgba(0, 180, 255, 0.1) 0%,
+                    rgba(0, 180, 255, 0.1) 37%, transparent 37%, transparent 100%),
+                radial-gradient(circle at 46% 16%, rgba(0, 180, 255, 0.1) 0%,
+                    rgba(0, 180, 255, 0.1) 43%, transparent 43%, transparent 100%),
+                radial-gradient(circle at 99% 25%, rgba(0, 180, 255, 0.1) 0%,
+                    rgba(0, 180, 255, 0.1) 22%, transparent 22%, transparent 100%),
+                radial-gradient(circle at 57% 88%, rgba(0, 180, 255, 0.1) 0%,
+                    rgba(0, 180, 255, 0.1) 86%, transparent 86%, transparent 100%),
+                radial-gradient(circle at 82% 78%, rgba(0, 180, 255, 0.1) 0%,
+                    rgba(0, 180, 255, 0.1) 22%, transparent 22%, transparent 100%),
+                linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+            background-size: 100%;
+            background-position: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar Section -->
+
+    <nav class="bg-sky-900 text-cyan-300 drop-shadow-md p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="https://img.icons8.com/ios/452/53eafd/cloud.png" class="w-10 text-white h-10" alt="logo">
+            <h1 class="text-2xl space-x-2 font-bold ml-2">Cloud Services</h1>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-cyan-300 focus:outline-none hover:bg-sky-950">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex items-center space-x-2">
+            <a href="./index.html" class="mr-4 hover:text-blue-500">Home</a>
+            <a href="./about.html" class="mr-4 hover:text-blue-500">About</a>
+            <a href="./Services.html" class="mr-4 hover:text-blue-500">Services</a>
+            <a href="./Contact Us.html" class="mr-4 hover:text-blue-500">Contact</a>
+            <button class="text-cyan-300 focus:outline-none">
+                <img src="https://img.icons8.com/ios/452/50/53eafd/search" alt="search">
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden md:hidden fixed right-0 top-0 w-full h-screen space-y-10 text-4xl bg-sky-900 flex flex-col items-center text-cyan-300 space-y-2 mt-4">
+        <div class="flex justify-end w-full px-8">
+            <button id="close-btn" class="text-cyan-300 focus:outline-none hover:bg-sky-950">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <a href="./index.html" class="hover:text-blue-500">Home</a>
+        <a href="./about.html" class="hover:text-blue-500">About</a>
+        <a href="./Services.html" class="hover:text-blue-500">Services</a>
+        <a href="./Contact Us.html" class="hover:text-blue-500">Contact</a>
+    </div>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.getElementById('close-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    </script>
+    <br>
+
+    <!--Hero Section -->
+
+    <section class="text-cyan-200 mt-20 flex flex-col md:flex-row justify-around items-center p-4">
+        <div class="image w-full md:w-1/2">
+            <img src="Images/3214.jpg" class="w-full h-120 object-cover rounded-lg" alt="hero">
+        </div>
+        <div class="txt text-center p-4 text-cyan-200 rounded-lg space-y-6 space-x-4 w-full md:w-1/2">
+            <h1 class="text-5xl font-bold">Welcome to Cloud Services</h1>
+            <p class="text-xl">We provide the best cloud services for your business</p>
+            <button class="bg-sky-900 text-cyan-200 p-3 px-5 hover:text-blue-500 rounded-full mt-5">Get Started</button>
+        </div>
+    </section>
+
+    <br> <br> <br> <br> <br>
+
+    <!--About Section -->
+
+    <section class="text-cyan-200 bg-gray-900 flex flex-col justify-center items-center py-30">
+        <div class="txt text-center p-10 text-cyan-200 rounded-lg space-y-6 space-x-4 w-full md:w-3/4 lg:w-1/2">
+            <h1 class="text-5xl font-bold">About Us</h1>
+            <p class="text-xl">We provide the best cloud services for your business.
+                <br>Our mission is to provide the best cloud services for your business.
+                <br>Our vision is to be the best cloud service provider in the world.
+            </p>
+            <button class="bg-sky-900 text-cyan-200 py-3 px-5 hover:text-blue-500 rounded-full mt-5">Learn More</button>
+        </div>
+    </section>
+
+    <br> <br> <br> <br>
+
+    <!--Service Section -->
+
+    <section class="bg-gray-900 p-10 text-cyan-200 flex flex-col justify-center items-center space-y-6">
+        <h1 class="text-3xl font-bold text-center">Our Services</h1>
+        <p class="text-center text-xl w-full md:w-3/4 lg:w-1/2">We provide the best cloud services for your business
+            <br>Our services include cloud storage, cloud security, cloud technology, <br>
+            cloud computing, cloud space, and cloud network.
+        </p>
+    </section>
+
+    <br> <br> <br> <br>
+
+    <!--Services Section -->
+
+    <section class="text-cyan-200 flex flex-col justify-evenly items-center p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-sky-900 card rounded-lg space-y-4 shadow-md">
+                <img src="Images/3366.jpg" class="w-80 h-70 rounded-t-lg " alt="Cloud Storage">
+                <h2 class="text-center text-2xl font-bold">Cloud Storage</h2>
+                <p class="mt-4 text-center mb-3">We provide the best cloud storage <br>
+                    for your business </p>
+            </div>
+            <div class="bg-sky-900 card rounded-lg space-y-4 shadow-md">
+                <img src="Images/Real 5.JPG" class="w-80 h-70 rounded-t-lg " alt="Cloud Storage">
+                <h2 class="text-center text-2xl font-bold">Cloud Security</h2>
+                <p class="mt-4 text-center mb-3">We provide the best cloud security <br>
+                    for your business </p>
+            </div>
+            <div class="bg-sky-900 card rounded-lg space-y-4 shadow-md">
+                <img src="Images/Real 2.JPG" class="w-80 h-70 rounded-t-lg " alt="Cloud Storage">
+                <h2 class="text-center text-2xl font-bold">Cloud Technology</h2>
+                <p class="mt-4 text-center mb-3">We provide the best cloud technology <br>
+                    for your business </p>
+            </div>
+            <div class="bg-sky-900 card rounded-lg space-y-4 shadow-md">
+                <img src="Images/Cloud Computing5.jpg" class="w-80 h-70 rounded-t-lg " alt="Cloud Storage">
+                <h2 class="text-center text-2xl font-bold">Cloud Computing</h2>
+                <p class="mt-4 text-center mb-3">We provide the best cloud computing <br>
+                    for your business </p>
+            </div>
+            <div class="bg-sky-900 card rounded-lg space-y-4 shadow-md">
+                <img src="Images/rm373-socialpost-03-455.jpg" class="w-80 h-70 rounded-t-lg " alt="Cloud Storage">
+                <h2 class="text-center text-2xl font-bold">Cloud space</h2>
+                <p class="mt-4 text-center mb-3">We provide the best cloud space <br>
+                    for your business </p>
+            </div>
+            <div class="bg-sky-900 card rounded-lg space-y-4 shadow-md">
+                <img src="Images/Cloud Network.jpg" class="w-80 h-70 rounded-t-lg " alt="Cloud Storage">
+                <h2 class="text-center text-2xl font-bold">Cloud Network</h2>
+                <p class="mt-4 text-center mb-3">We provide the best cloud network <br>
+                    for your business </p>
+            </div>
+    </section>
+
+    <br> <br> <br> <br>
+
+    <!--Contact Section -->
+    <section class="bg-sky-900 p-4 text-white">
+        <h1 class="text-center text-4xl font-bold">Contact Us</h1>
+        <p class="text-center text-2xl font-bold">Get in touch with us
+            <br>for the best cloud services for your business
+        </p>
+        <br>
+        <form action=""
+            class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
+            <input type="text" class="bg-sky-800 p-3 px-5 rounded-lg w-full md:w-auto" placeholder="Name">
+            <input type="text" class="bg-sky-800 p-3 px-5 rounded-lg w-full md:w-auto" placeholder="Address">
+            <input type="email" class="bg-sky-800 p-3 px-5 rounded-lg w-full md:w-auto" placeholder="Email">
+            <input type="tel" class="bg-sky-800 p-3 px-5 rounded-lg w-full md:w-auto" placeholder="Phone">
+        </form>
+        <br>
+        <form action=""
+            class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
+            <textarea class="bg-sky-800 p-3 px-5 rounded-lg w-full md:w-auto" placeholder="Message"></textarea>
+            <button class="bg-sky-800 text-white p-3 px-5 rounded-lg">Submit</button>
+        </form>
+    </section>
+
+    <br> <br> <br> <br>
+
+    <!--Review Section -->
+    <section class="p-8 pb-20 text-cyan-200 bg-gray-900">
+        <h1 class="text-center text-4xl font-bold">Reviews</h1>
+        <p class="text-center text-2xl font-bold">What our customers say about us</p>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="bg-sky-800 card rounded-lg space-y-3 p-3 shadow-md">
+                <div class="icons">
+                    <div class="quote flex items-center justify-end">
+                        <img src="https://img.icons8.com/ios/452/quote-left.png" class="w-5 h-5" alt="quote">
+                    </div>
+                    <div class="star flex items-center space-x-2">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/star.png" alt="star">
+                    </div>
+                </div>
+                <p>
+                    "The best cloud services for my business. <br>
+                    I highly recommend Cloud Services."
+                </p>
+                <div class="flex items-center space-x-2">
+                    <img src="Images/minato.avif" class="w-40 h-40 rounded-full" alt="user">
+                    <h1 class="text-2xl font-bold">Abdiwalker</h1>
+
+                </div>
+            </div>
+            <div class="bg-sky-800 card rounded-lg space-y-3 p-3 shadow-md">
+                <div class="icons">
+                    <div class="quote flex items-center justify-end">
+                        <img src="https://img.icons8.com/ios/452/quote-left.png" class="w-5 h-5" alt="quote">
+                    </div>
+                    <div class="star flex items-center space-x-2">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/star.png" alt="star">
+                    </div>
+                </div>
+                <p>
+                    "The best cloud services for my business. <br>
+                    I highly recommend Cloud Services."
+                </p>
+                <div class="flex items-center space-x-2">
+                    <img src="Images/minato.avif" class="w-40 h-40 rounded-full" alt="user">
+                    <h1 class="text-2xl font-bold">Abdiwalker</h1>
+
+                </div>
+            </div>
+            <div class="bg-sky-800 card rounded-lg space-y-3 p-3 shadow-md">
+                <div class="icons">
+                    <div class="quote flex items-center justify-end">
+                        <img src="https://img.icons8.com/ios/452/quote-left.png" class="w-5 h-5" alt="quote">
+                    </div>
+                    <div class="star flex items-center space-x-2">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/star.png" alt="star">
+                    </div>
+                </div>
+                <p>
+                    "The best cloud services for my business. <br>
+                    I highly recommend Cloud Services."
+                </p>
+                <div class="flex items-center space-x-2">
+                    <img src="Images/minato.avif" class="w-40 h-40 rounded-full" alt="user">
+                    <h1 class="text-2xl font-bold">Abdiwalker</h1>
+
+                </div>
+            </div>
+            <div class="bg-sky-800 card rounded-lg space-y-3 p-3 shadow-md">
+                <div class="icons">
+                    <div class="quote flex items-center justify-end">
+                        <img src="https://img.icons8.com/ios/452/quote-left.png" class="w-5 h-5" alt="quote">
+                    </div>
+                    <div class="star flex items-center space-x-2">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/F4F400/star.png" alt="star">
+                        <img src="https://img.icons8.com/forma-thin-filled/24/star.png" alt="star">
+                    </div>
+                </div>
+                <p>
+                    "The best cloud services for my business. <br>
+                    I highly recommend Cloud Services."
+                </p>
+                <div class="flex items-center space-x-2">
+                    <img src="Images/minato.avif" class="w-40 h-40 rounded-full" alt="user">
+                    <h1 class="text-2xl font-bold">Abdiwalker</h1>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <br> <br> <br> <br>
+
+
+    <!--Footer Section -->
+
+    <footer class="bg-sky-900 text-cyan-200 space-y-4 p-4 text-center">
+        <h1 class="text-2xl font-bold">Cloud Services</h1>
+        <p class="text-lg">2025 &copy; Cloud Services. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
